@@ -21,14 +21,14 @@ pipeline {
         }
         stage('Build') {
             steps {
-                // Compile the Java program located in the JavaProgram folder
-                sh 'javac JavaProgram/HelloWorld.java'
+                // Compile the Java program
+                sh 'javac HelloWorld.java'
             }
         }
         stage('Test') {
             steps {
                 // Run the Java program
-                sh 'java -cp JavaProgram HelloWorld'
+                sh 'java HelloWorld'
             }
         }
     }
