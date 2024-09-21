@@ -5,7 +5,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the latest code from GitHub
-                git url: 'https://github.com/LaViyaan/Helloworld-Jenkins.git', branch: 'main'
+                git branch: 'main', url: 'https://github.com/LaViyaan/Helloworld-Jenkins'
+                
             }
         }
         stage('Check Java Version') {
